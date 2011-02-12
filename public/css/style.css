@@ -226,6 +226,7 @@ button {  width: auto; overflow: visible; }
 
 #container{
 	background-color:#E4E2D5;
+	font-family:helvetica;
 }
 header{
 	height:100px;
@@ -233,9 +234,9 @@ header{
   radial, 500 25%, 20, 500 25%, 40, from(blue), to(#eef)
 );*/
 	background-color:#525750;
-	-moz-box-shadow: 10px 10px 5px #525750;
+	-moz-box-shadow: 0 0 5px #525750;
 	-webkit-box-shadow: 0 0 5px #525750;
-	box-shadow: 10px 10px 5px #525750;
+	box-shadow: 0 0 5px #525750;
 }
 #headerGradient{
 	width:900px;
@@ -289,11 +290,11 @@ footer nav{
 	padding:100px;
 }
 #homeIntroPar{
-	width:500px;
 	display:inline-block;
 	margin-bottom:20px;
 	font-size:20px;
 	line-height:1.5em;
+	padding-right:400px;
 }
 #termsLabel{
 	width:500px;
@@ -333,9 +334,18 @@ footer nav{
 	float:left;
 }
 
-
-
-
+.orangeButton{
+	background-color:#a35008;
+	display:inline-block;
+	padding:5px 12px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	color:#fff;
+	text-decoration:none;
+	text-transform:lowercase;
+	font-weight:bold;
+}
 
 .orangeButton{
    border-top: 1px solid #ff8c00;
@@ -399,9 +409,11 @@ footer nav{
    background: #661913;
 }
 
-
-
-
+h2.bestAroundYou{
+	font-size:16px;
+	margin-top:20px;
+	margin-bottom:20px;
+}
 
 
 
