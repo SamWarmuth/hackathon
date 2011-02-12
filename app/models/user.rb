@@ -26,6 +26,7 @@ class User < CouchRest::ExtendedDocument
   def new_restaurant?    
     #is the user in a new restaurant?
     raw = JSON.parse(Curl::Easy.perform("https://api.foursquare.com/v2/users/self/checkins?oauth_token=#{self.fs_token}").body_str)['response']
+    return false if raw.nil?
     checkins = raw['checkins']['items']
     new_checkins = checkins.find_all{|c| (c['createdAt'].to_i > self.after_time) && (c['venue']['categories'].first['parents'].first == "Food")}.sort_by{|c| -(c['createdAt'].to_i)}
     

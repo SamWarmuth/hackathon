@@ -1,0 +1,16 @@
+Hi #{@user.name}.
+%br
+%br
+%br
+%form{:method => "POST"}
+  What did you get at #{@user.restaurant.name}?
+  %br
+  %input{:type => "text", :name => "meal"}
+  %br
+  %br
+  and how did you like it?
+  %br
+  %input{:type => "text", :name => "rating"}
+  %br
+  %br
+  %input{:type => "submit"}

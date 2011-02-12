@@ -68,7 +68,7 @@ class Main
     @user = User.by_live_token(:key => params[:live_token]).first
     return false if @user.nil?
     
-    return "Hi #{@user.name}.<br/><br/><br/> What did you get at #{@user.restaurant.name}, and how did you like it?<br/><br/><br/>Post back to this url to store."
+    haml :review
   end
   
   
