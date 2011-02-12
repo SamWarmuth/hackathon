@@ -60,7 +60,7 @@ class User < CouchRest::ExtendedDocument
     self.save
     puts "creating responder"
     from_number = "4155992671" #twilio sandbox number
-    Twilio::Sms.message(from_number, self.phone_number, "The top meals are #{Restaurant.get(self.current_restaurant_id).top_meals.map{|m| m.name + "("+m.rating+")"}}.")
+    Twilio::Sms.message(from_number, self.phone_number, "The top meals are #{Restaurant.get(self.current_restaurant_id).top_meals.map{|m| m.name + "("+m.rating.to_s+")"}}.")
     
     Scheduler.in time do
       puts "sent text"
