@@ -27,13 +27,13 @@ class Main
 
   get '/register' do
     logged_in?
-    redirect "https://foursquare.com/oauth2/authenticate?client_id=#{FSKey}&response_type=code&redirect_uri=http://localhost:4567/fs-register"
+    redirect "https://foursquare.com/oauth2/authenticate?client_id=#{FSKey}&response_type=code&redirect_uri=http://whatsbest.samwarmuth.com/fs-register"
   end
   
   get '/fs-register' do
     logged_in?
     user_code = params[:code]
-    c = Curl::Easy.perform("https://foursquare.com/oauth2/access_token?client_id=#{FSKey}&client_secret=#{FSSecret}&grant_type=authorization_code&redirect_uri=http://localhost:4567/fs-register&code=#{user_code}")
+    c = Curl::Easy.perform("https://foursquare.com/oauth2/access_token?client_id=#{FSKey}&client_secret=#{FSSecret}&grant_type=authorization_code&redirect_uri=http://whatsbest.samwarmuth.com/fs-register&code=#{user_code}")
     @user.fs_token = JSON.parse(c.body_str)["access_token"]
     @user.save
     redirect "/checkins"
