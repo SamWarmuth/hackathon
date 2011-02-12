@@ -33,7 +33,8 @@ class Main
     return "Responder created for #{@user.name}."
   end
   get "/restaurants" do
-    Restaurant.all.map{|r| r.name + "("+r.fs_id+")"}.join("<br/>")
+    @restaurants = Restaurant.all
+    erb :restaurants
   end
   get "/review/:live_token" do
     @user = User.by_live_token(:key => params[:live_token]).first
