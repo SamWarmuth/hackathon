@@ -1,5 +1,5 @@
 class Main
   get "/" do
-    haml :index
+    erb :index
   end
 end
