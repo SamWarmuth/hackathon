@@ -76,6 +76,15 @@ class Main
     @user = User.by_live_token(:key => params[:live_token]).first
     return false if @user.nil?
     review = Review.new
+    meal = Meal.by_name(:key => params[:meal]).first
+    if meal.nil?
+      meal = Meal.new
+      meal.name = params[:meal]
+    end
+    review.meal_id = meal.id
+    review.user_id = @user.id
+    review.rating = params[:rating].to_i
+    review.save
     
     
     @user.live_token = nil

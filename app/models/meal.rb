@@ -2,6 +2,7 @@ class Meal < CouchRest::ExtendedDocument
   use_database COUCHDB_SERVER
   
   property :name
+  view_by :name
   property :restaurant_id
   view_by :restaurant_id
   

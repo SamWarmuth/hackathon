@@ -3,6 +3,7 @@ Hi #{@user.name}.
 %br
 %br
 %form{:method => "POST"}
+  %input{:type => "hidden", :name => "live_token", :value => params[:live_token]}
   What did you get at #{@user.restaurant.name}?
   %br
   %input{:type => "text", :name => "meal"}
