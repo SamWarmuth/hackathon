@@ -36,7 +36,7 @@ class Main
     c = Curl::Easy.perform("https://foursquare.com/oauth2/access_token?client_id=#{FSKey}&client_secret=#{FSSecret}&grant_type=authorization_code&redirect_uri=http://www.whatsbesthere.com/fs-register&code=#{user_code}")
     @user.fs_token = JSON.parse(c.body_str)["access_token"]
     @user.save
-    redirect "/checkins"
+    redirect "/"
   end
   
   get '/checkins' do
