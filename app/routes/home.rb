@@ -18,7 +18,7 @@ class Main
   get "/terms-and-privacy" do
     erb :termsandprivacy
   end
-  
+
   get '/register' do
     redirect "https://foursquare.com/oauth2/authenticate?client_id=#{FSKey}&response_type=code&redirect_uri=http://localhost:4567/fs-register"
   end
