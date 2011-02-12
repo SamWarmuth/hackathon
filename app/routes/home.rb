@@ -1,5 +1,11 @@
 class Main
   get "/" do
+    if logged_in? == false
+      @new_user = true
+      @user = User.new
+      @user.save
+      set_cookies
+    end
     erb :index
   end
 
@@ -36,7 +42,7 @@ class Main
   get '/checkins' do
     logged_in?
     puts @user.fs_token
-    checkins = JSON.parse(Curl::Easy.perform("https://api.foursquare.com/v2/users/self/checkins?oauth_token=#{user.fs_token}").body_str)['response']
+    checkins = JSON.parse(Curl::Easy.perform("https://api.foursquare.com/v2/users/self/checkins?oauth_token=#{@user.fs_token}").body_str)['response']
     pretty =  checkins['checkins']['items'].map{|checkin| checkin['venue']['name'] + " ("+checkin['venue']['categories'].first['parents'].first+") - " + Time.at(checkin['createdAt'].to_i).to_s}.join("<br/>")
     
     return pretty + "<br/><br/><br/>" + checkins.inspect

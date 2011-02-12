@@ -14,6 +14,9 @@ class User < CouchRest::ExtendedDocument
   property :live_token
   view_by :live_token
   
+  property :challenges
+  
+  
   property :current_restaurant_id
   
   def restaurant
