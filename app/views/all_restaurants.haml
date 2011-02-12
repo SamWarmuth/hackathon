@@ -2,4 +2,4 @@
   %h3= restaurant.name
   %ul
     -restaurant.meals.each do |meal|
-      %li= meal.name
+      %li #{meal.name} (#{meal.rating})
