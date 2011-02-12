@@ -12,3 +12,6 @@ stories 0.1.1 (test) git://github.com/citrusbyte/stories.git
 webrat 0.5.1 (test) git://github.com/brynary/webrat.git
 couchrest 0.33 git://github.com/couchrest/couchrest.git
 json git://github.com/genki/json.git
+rufus-scheduler git://github.com/jmettraux/rufus-scheduler.git
+twilio git://github.com/webficient/twilio.git
+curb git://github.com/taf2/curb.git
