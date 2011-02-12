@@ -1,0 +1,5 @@
+-@restaurants.each do |restaurant|
+  %h3= restaurant.name
+  %ul
+    -restaurant.meals.each do |meal|
+      %li= meal.name

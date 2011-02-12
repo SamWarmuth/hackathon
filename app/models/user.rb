@@ -60,8 +60,8 @@ class User < CouchRest::ExtendedDocument
     
     Scheduler.in time do
       puts "sent text"
-      Twilio::Sms.message(from_number, self.phone_number, "How's the food at #{self.restaurant.name}? Review it here: http://www.whatsbesthere.com/review/#{self.live_token}.")
-      puts "Send text with url 'whatsbesthere.com/review/#{self.live_token}'"
+      Twilio::Sms.message(from_number, self.phone_number, "How's the food at #{self.restaurant.name}? Review it here: http://whatsbest.samwarmuth.com/review/#{self.live_token}.")
+      puts "Send text with url 'whatsbest.samwarmuth.com/review/#{self.live_token}'"
     end
   end
   

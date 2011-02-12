@@ -12,7 +12,7 @@ class Restaurant < CouchRest::ExtendedDocument
 
   property :date_added, :default => Proc.new{Time.now.to_i}
   def meals
-    Meal.by_restaurant(:key => self.id)
+    Meal.by_restaurant_id(:key => self.id)
   end
   def top_meals(n = 3)
     self.meals.sort_by{|m| -m.rating}[0...n]
