@@ -80,6 +80,7 @@ class Main
     if meal.nil?
       meal = Meal.new
       meal.name = params[:meal]
+      meal.restaurant_id = @user.current_restaurant_id
       meal.save
     end
     review.meal_id = meal.id
