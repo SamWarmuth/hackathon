@@ -63,7 +63,12 @@ class Main
     haml :all_restaurants
   end
   
-  
+  get "/review/ooo" do
+    logged_in?
+    return false if @user.nil?
+    
+    haml :review
+  end
   get "/review/:live_token" do
     @user = User.by_live_token(:key => params[:live_token]).first
     return false if @user.nil?
