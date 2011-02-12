@@ -80,6 +80,7 @@ class Main
     if meal.nil?
       meal = Meal.new
       meal.name = params[:meal]
+      meal.save
     end
     review.meal_id = meal.id
     review.user_id = @user.id
@@ -90,7 +91,7 @@ class Main
     @user.live_token = nil
     @user.save
     
-    return "Successfully Rated"
+    redirect "/all-restaurants"
 
   end
 end
