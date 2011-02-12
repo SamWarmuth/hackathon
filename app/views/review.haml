@@ -1,36 +1,37 @@
-Hi #{@user.name}.
-%br
-%br
-%br
-%form{:method => "POST", :style => "font-size: 3em"}
-  %input{:type => "hidden", :name => "live_token", :value => params[:live_token]}
-  What did you get at #{@user.restaurant.name}?
-  %br
-  %input{:type => "text", :name => "meal", :style => "font-size: 1.5em"}
+.holder{:style => "background: #D9D6C6;"}
+  %h3{:style => "font-size: 3em"}Hi #{@user.name}.
   %br
   %br
-  and how did you like it?
   %br
-  %input#zero{:type => "radio", :name => "rating", :value => 0}
-  <label for='zero'>
-  %img{:src => "/img/rating-0.png"}
-  </label>
-  %input#one{:type => "radio", :name => "rating", :value => 2}
-  <label for='one'>
-  %img{:src => "/img/rating-1.png"}
-  </label>
-  %input#two{:type => "radio", :name => "rating", :value => 4}
-  <label for='two'>
-  %img{:src => "/img/rating-2.png"}
-  </label>
-  %input#three{:type => "radio", :name => "rating", :value => 6}
-  <label for='three'>
-  %img{:src => "/img/rating-3.png"}
-  </label>
-  %input#four{:type => "radio", :name => "rating", :value => 8}
-  <label for='four'>
-  %img{:src => "/img/rating-4.png"}
-  </label>
-  %br
-  %br
-  %input{:type => "submit", :value => "submit"}
+  %form{:method => "POST", :style => "font-size: 3em"}
+    %input{:type => "hidden", :name => "live_token", :value => params[:live_token]}
+    What did you get at #{@user.restaurant.name}?
+    %br
+    %input{:type => "text", :name => "meal", :style => "font-size: 1.5em"}
+    %br
+    %br
+    and how did you like it?
+    %br
+    %input#zero{:type => "radio", :name => "rating", :value => 0}
+    <label for='zero'>
+    %img{:src => "/img/rating-0.png"}
+    </label>
+    %input#one{:type => "radio", :name => "rating", :value => 2}
+    <label for='one'>
+    %img{:src => "/img/rating-1.png"}
+    </label>
+    %input#two{:type => "radio", :name => "rating", :value => 4}
+    <label for='two'>
+    %img{:src => "/img/rating-2.png"}
+    </label>
+    %input#three{:type => "radio", :name => "rating", :value => 6}
+    <label for='three'>
+    %img{:src => "/img/rating-3.png"}
+    </label>
+    %input#four{:type => "radio", :name => "rating", :value => 8}
+    <label for='four'>
+    %img{:src => "/img/rating-4.png"}
+    </label>
+    %br
+    %br
+    %input{:type => "submit", :value => "submit"}
