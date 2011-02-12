@@ -37,28 +37,28 @@
 </head>
 
 <body>
-  <div id="container"><header><div id="headerGradient"><h1 id="logo" class="ir">What's Best Here?
-  </h1></div></header>
+  <div id="container"><header><div id="headerGradient"><a id="logo" class="ir" href="/">What's Best Here?
+  </a>
+  <img src="/img/iphonescreenshot.png"  id="phoneThumb" width="247" height="546" alt="mobile" />
+  </div></header>
     
     <div id="main">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in 
-massa diam, et gravida mi. Maecenas vitae ipsum nec ante sagittis 
-feugiat vel id leo. Fusce ornare adipiscing leo, ut tempus enim 
-tincidunt at.</p>
+<p id="homeIntroPar">Find out the best items on the menu, right when you check in to a restaurant.</p>
 <form action="/#" method="get" id="oauthform" name="oauthform">
-<label for="termsbox">
+<!--<label id="termsLabel" for="termsbox">
 	<input type="checkbox" value="true" name="termsbox" id="termsbox" />
 	I agree to the <a href="/terms-and-privacy">terms and privacy</a> policy and understand this app will send me text messages. Unsure, check out <a href="/how-it-works">how it works</a>.
-</label>
-<a href="/oauth">oauth button</a>
+</label>-->
+<a href="/oauth" class="orangeButton">login with foursquare</a>
 </form>
-<h2>What's best [around you]/[everywhere]</h2>
-<ul>
+<h2>What's best around you...</h2>
+<ul class="homeRestaurantList">
 	<li>
-		<img src="/" alt="conejitos" width="25" height="25" />
+		<img src="/" alt="conejitos" width="150" height="150" />
+		<div class="floatContainer">
 		<h3>Conejitos Place Mexican Restaurant</h3>
 		<p class="address">539 West Virginia Street</p>
-		<ul>
+		<ul class="homeMealList">
 			<li>
 				<img src="/" alt="chicken mole dark meat" width="25" height="25" />
 				<h4>Chicken Mole Dark Meat</h4>
@@ -72,61 +72,114 @@ tincidunt at.</p>
 			<li>
 				<img src="/" alt="chicken mole dark meat" width="25" height="25" />
 				<h4>Chicken Mole Dark Meat</h4>
+				<dl>
+					<dt>rated:</dt>
+					<dd>3 times</dd>
+					<dt>avg:</dt>
+					<dd>8.3</dd>
+				</dl>
 			</li>
 			<li>
 				<img src="/" alt="chicken mole dark meat" width="25" height="25" />
 				<h4>Chicken Mole Dark Meat</h4>
+				<dl>
+					<dt>rated:</dt>
+					<dd>3 times</dd>
+					<dt>avg:</dt>
+					<dd>8.3</dd>
+				</dl>
 			</li>
 			<li>
-				<a href="/restaurant/conejitos">See the full menu...</a>
+				<a href="/place/conejitos">See the full menu...</a>
 			</li>
 		</ul>
+		</div>
 	</li>
 	<!------------------------------------->
 	<li>
-		<img src="/" alt="conejitos" width="25" height="25" />
+		<img src="/" alt="conejitos" width="150" height="150" />
+		<div class="floatContainer">		
 		<h3>Conejitos Place Mexican Restaurant</h3>
 		<p class="address">539 West Virginia Street</p>
-		<ul>
+		<ul class="homeMealList">
 			<li>
 				<img src="/" alt="chicken mole dark meat" width="25" height="25" />
 				<h4>Chicken Mole Dark Meat</h4>
+				<dl>
+					<dt>rated:</dt>
+					<dd>3 times</dd>
+					<dt>avg:</dt>
+					<dd>8.3</dd>
+				</dl>
 			</li>
 			<li>
 				<img src="/" alt="chicken mole dark meat" width="25" height="25" />
 				<h4>Chicken Mole Dark Meat</h4>
+				<dl>
+					<dt>rated:</dt>
+					<dd>3 times</dd>
+					<dt>avg:</dt>
+					<dd>8.3</dd>
+				</dl>
 			</li>
 			<li>
 				<img src="/" alt="chicken mole dark meat" width="25" height="25" />
 				<h4>Chicken Mole Dark Meat</h4>
+				<dl>
+					<dt>rated:</dt>
+					<dd>3 times</dd>
+					<dt>avg:</dt>
+					<dd>8.3</dd>
+				</dl>
 			</li>
 			<li>
-				<a href="/restaurant/conejitos">See the full menu...</a>
+				<a href="/place/conejitos">See the full menu...</a>
 			</li>
 		</ul>
+		</div>
 	</li>
 	<!------------------------------------->
 	<li>
-		<img src="/" alt="conejitos" width="25" height="25" />
+		<img src="/" alt="conejitos" width="150" height="150" />
+		<div class="floatContainer">
 		<h3>Conejitos Place Mexican Restaurant</h3>
 		<p class="address">539 West Virginia Street</p>
-		<ul>
+		<ul class="homeMealList">
 			<li>
 				<img src="/" alt="chicken mole dark meat" width="25" height="25" />
 				<h4>Chicken Mole Dark Meat</h4>
+				<dl>
+					<dt>rated:</dt>
+					<dd>3 times</dd>
+					<dt>avg:</dt>
+					<dd>8.3</dd>
+				</dl>
 			</li>
 			<li>
 				<img src="/" alt="chicken mole dark meat" width="25" height="25" />
 				<h4>Chicken Mole Dark Meat</h4>
+				<dl>
+					<dt>rated:</dt>
+					<dd>3 times</dd>
+					<dt>avg:</dt>
+					<dd>8.3</dd>
+				</dl>
 			</li>
 			<li>
 				<img src="/" alt="chicken mole dark meat" width="25" height="25" />
 				<h4>Chicken Mole Dark Meat</h4>
+				<dl>
+					<dt>rated:</dt>
+					<dd>3 times</dd>
+					<dt>avg:</dt>
+					<dd>8.3</dd>
+				</dl>
 			</li>
 			<li>
-				<a href="/restaurant/conejitos">See the full menu...</a>
+				<a href="/place/conejitos">See the full menu...</a>
 			</li>
 		</ul>
+		</div>
 	</li>
 	<!------------------------------------->
 </ul>
