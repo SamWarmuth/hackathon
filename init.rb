@@ -16,6 +16,7 @@ require "json"
 require "rufus/scheduler"
 require "foursquare"
 require "twilio"
+require 'curb'
 
 
 class Main < Monk::Glue
@@ -28,8 +29,9 @@ couchdb_url = monk_settings(:couchdb)[:url]
 COUCHDB_SERVER = CouchRest.database!(couchdb_url)
 
 Twilio.connect('AC9fbadee95049fa4bb1c263b9dd234045', 'ef3356cb46abcab6c1cad074cdd5436f')
-
-FSOauth = Foursquare::OAuth.new("5PO54VVOBWAO3N325SEPE030W40FFHQXNMNPFNYRJOI1M012", "FQEBAIC4DXZCV11SESS54FBE0Q0S0X2STODP0WJBM3HC5U4M")
+FSKey = "5PO54VVOBWAO3N325SEPE030W40FFHQXNMNPFNYRJOI1M012"
+FSSecret = "FQEBAIC4DXZCV11SESS54FBE0Q0S0X2STODP0WJBM3HC5U4M"
+Oauth = Foursquare::OAuth.new(FSKey, FSSecret)
 
 
 
@@ -37,10 +39,9 @@ FSOauth = Foursquare::OAuth.new("5PO54VVOBWAO3N325SEPE030W40FFHQXNMNPFNYRJOI1M01
 
 if defined?(Scheduler).nil?
   Scheduler = Rufus::Scheduler.start_new
-
-  Scheduler.every "5m" do
+  Scheduler.every "30s" do
     User.all.each do |user|
-      user.create_responder if user.new_restaurant?
+      user.create_responder("10s") if user.new_restaurant?
     end
   end
 end
