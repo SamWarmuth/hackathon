@@ -337,13 +337,40 @@ footer nav{
 
 
 
+.orangeButton{
+   border-top: 1px solid #ff8c00;
+   background: #a35008;
+   background: -webkit-gradient(linear, left top, left bottom, from(#f77e2d), to(#a35008));
+   background: -moz-linear-gradient(top, #f77e2d, #a35008);
+   padding: 7px 14px;
+   -webkit-border-radius: 9px;
+   -moz-border-radius: 9px;
+   border-radius: 9px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #242424;
+   font-size: 14px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.orangeButton:hover {
+   border-top-color: #545251;
+   background: #545251;
+   color: #ccc;
+   }
+.orangeButton:active {
+   border-top-color: #661913;
+   background: #661913;
+   }
 
 
 
 
 
-
-.whiteButton {
+.whiteButton{
    border-top: 1px solid #999999;
    background: #b8b8b8;
    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#b8b8b8));
@@ -374,34 +401,7 @@ footer nav{
 
 
 
-.orangeButton{
-   border-top: 1px solid #ff8c00;
-   background: #a35008;
-   background: -webkit-gradient(linear, left top, left bottom, from(#f77e2d), to(#a35008));
-   background: -moz-linear-gradient(top, #f77e2d, #a35008);
-   padding: 7px 14px;
-   -webkit-border-radius: 9px;
-   -moz-border-radius: 9px;
-   border-radius: 9px;
-   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   box-shadow: rgba(0,0,0,1) 0 1px 0;
-   text-shadow: rgba(0,0,0,.4) 0 1px 0;
-   color: #242424;
-   font-size: 14px;
-   font-family: Helvetica, Arial, Sans-Serif;
-   text-decoration: none;
-   vertical-align: middle;
-   }
-.orangeButton:hover {
-   border-top-color: #545251;
-   background: #545251;
-   color: #ccc;
-   }
-.orangeButton:active {
-   border-top-color: #661913;
-   background: #661913;
-   }
+
 
 
 
